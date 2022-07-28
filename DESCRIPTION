@@ -2,10 +2,14 @@ Package: WRKsurvey
 Title: Community Survey for The WRK Group 
 Version: 0.0.0.9000
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: A community survey dashboard for The WRK Group
-License: AGPL (>= 3)
+    person("Naoyuki", "Sunami", , "nami@techimpact.org", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0001-5482-8370"))
+Description: A community survey dashboard for The WRK Group.
+License: AGPL (>= 3) | file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.1.2
+RoxygenNote: 7.2.1
+Imports: 
+    dplyr,
+    magrittr,
+    qualtRics
