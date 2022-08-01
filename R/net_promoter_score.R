@@ -1,6 +1,6 @@
 #' Net promoter score UI module
 #'
-#' @param id
+#' @param id element ID
 #'
 #' @return a `div` tag object
 #' @export
@@ -32,7 +32,9 @@ net_promoter_score_UI <- function(id) {
 #' @export
 #'
 #' @examples
-#' net_promoter_score_server("nps")
+#' \dontrun{
+#' net_promoter_score_server("nps", data = get_survey_data())
+#' }
 net_promoter_score_server <- function(id, data) {
   moduleServer(id, function(input, output, session) {
 
