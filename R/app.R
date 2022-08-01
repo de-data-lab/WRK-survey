@@ -12,11 +12,11 @@
 run_app <- function(...){
 
   WRK_logo <- system.file("logo.png",
-                          package = packageName())
+                          package = utils::packageName())
   shiny::addResourcePath("logo", WRK_logo)
 
   styles <- system.file("styles.css",
-                        package = packageName())
+                        package = utils::packageName())
 
   # UI
   ui <- shiny::bootstrapPage(
