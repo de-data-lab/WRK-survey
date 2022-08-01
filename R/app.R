@@ -6,7 +6,9 @@
 #' @export
 #'
 #' @examples
+#' \dontrun{
 #' run_app()
+#' }
 run_app <- function(...){
 
   WRK_logo <- system.file("logo.png",
