@@ -2,4 +2,8 @@
 
 export("%>%")
 export(get_survey_data)
+export(navbar_UI)
+export(net_promoter_score_UI)
+export(net_promoter_score_server)
+export(run_app)
 importFrom(magrittr,"%>%")
