@@ -36,7 +36,7 @@ net_promoter_score_UI <- function(id) {
 #' net_promoter_score_server("nps", data = get_survey_data())
 #' }
 net_promoter_score_server <- function(id, data) {
-  moduleServer(id, function(input, output, session) {
+  shiny::moduleServer(id, function(input, output, session) {
 
     output$plot <- plotly::renderPlotly(
       {
