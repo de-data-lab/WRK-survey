@@ -1,3 +1,13 @@
+#' Title Render the navbar UI
+#'
+#' @param id id
+#' @param logo a string specifying the location of an image file
+#'
+#' @return a Shiny `tagList` object
+#' @export
+#'
+#' @examples
+#' navbar_UI("navbar", logo = "https://ui-avatars.com/api/?name=PostReview")
 navbar_UI <- function(id, logo) {
   # Navbar
   shiny::tagList(
@@ -60,7 +70,7 @@ navbar_UI <- function(id, logo) {
 }
 
 navbar_server <- function(id) {
-  moduleServer(id, function(input, output, session) {
+  shiny::moduleServer(id, function(input, output, session) {
 
   })
 }
