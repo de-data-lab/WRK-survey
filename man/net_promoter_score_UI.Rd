@@ -7,7 +7,7 @@
 net_promoter_score_UI(id)
 }
 \arguments{
-\item{id}{}
+\item{id}{element ID}
 }
 \value{
 a \code{div} tag object

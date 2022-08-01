@@ -16,5 +16,7 @@ an app
 Run The WRK Survey App
 }
 \examples{
+\dontrun{
 run_app()
+}
 }

@@ -18,5 +18,7 @@ shiny output
 Net promoter score server module
 }
 \examples{
-net_promoter_score_server("nps")
+\dontrun{
+net_promoter_score_server("nps", data = get_survey_data())
+}
 }
