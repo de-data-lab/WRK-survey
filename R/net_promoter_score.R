@@ -134,7 +134,7 @@ net_promoter_score_server <- function(id, data) {
           round(prop * 100, 1), "% ",
           "of participants answered that they would ",
           tolower(recommend_abbr),
-          " this community to someone else as a good place to live"
+          " recommend this community to someone else as a good place to live"
         )) %>%
         # Add line breaks to hover text
         dplyr::mutate(hovertext = stringr::str_wrap(hovertext, width = 25))
