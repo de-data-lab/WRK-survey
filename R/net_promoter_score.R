@@ -90,7 +90,8 @@ net_promoter_score_server <- function(id, data) {
           plotly::config(displayModeBar = FALSE) %>%
           plotly::add_annotations(text = sprintf("%.1f%%", would_recommend_prop * 100),
                                   showarrow = FALSE,
-                                  font = list(size = 50)) %>%
+                                  font = list(size = 50,
+                                              color = "#00A454")) %>%
           plotly::add_annotations(text = "Would Recommend",
                                   x = 1.05,
                                   y = -0.03,
