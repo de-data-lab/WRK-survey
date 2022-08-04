@@ -36,8 +36,9 @@ run_app <- function(...){
     # Body of the page
     shiny::withTags(
       # Render Card
-      div(class = "d-flex flex-column flex-lg-row container",
+      div(class = "d-flex flex-column flex-lg-row container justify-content-center",
           div(class = "container card border-light bg-info m-2",
+              style = "max-width: 50rem",
               div(class = "card-body",
                   net_promoter_score_UI("nps")
               )
@@ -52,6 +53,15 @@ run_app <- function(...){
     responses <- get_survey_data()
 
     # Update the responses dataset
+    # Net promoter scores
+    # Convert the recommend column to a factor
+    recommend_levels <- c("Definitely would NOT recommend",
+                          "Probably would NOT recommend",
+                          "Probably would recommend",
+                          "Definitely would recommend")
+    responses <- responses %>%
+      dplyr::mutate(recommend = factor(recommend, levels = recommend_levels))
+
     # Add two groups for the net promoter scores
     responses <- responses %>%
       dplyr::mutate(recommend_2gp = dplyr::case_when(
