@@ -53,6 +53,15 @@ run_app <- function(...){
     responses <- get_survey_data()
 
     # Update the responses dataset
+    # Net promoter scores
+    # Convert the recommend column to a factor
+    recommend_levels <- c("Definitely would NOT recommend",
+                          "Probably would NOT recommend",
+                          "Definitely would recommend",
+                          "Probably would recommend")
+    responses <- responses %>%
+      dplyr::mutate(recommend = factor(recommend, levels = recommend_levels))
+
     # Add two groups for the net promoter scores
     responses <- responses %>%
       dplyr::mutate(recommend_2gp = dplyr::case_when(
