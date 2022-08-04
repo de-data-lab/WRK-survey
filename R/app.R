@@ -57,8 +57,8 @@ run_app <- function(...){
     # Convert the recommend column to a factor
     recommend_levels <- c("Definitely would NOT recommend",
                           "Probably would NOT recommend",
-                          "Definitely would recommend",
-                          "Probably would recommend")
+                          "Probably would recommend",
+                          "Definitely would recommend")
     responses <- responses %>%
       dplyr::mutate(recommend = factor(recommend, levels = recommend_levels))
 
