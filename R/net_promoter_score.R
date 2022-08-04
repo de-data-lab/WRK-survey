@@ -17,7 +17,7 @@ net_promoter_score_UI <- function(id) {
               style = "max-width: 30rem",
               "How likely are you to recommend this community to someone else as a good place to live?"),
           div(
-            plotly::plotlyOutput(shiny::NS(id, "plot"), width = "400px"),
+            plotly::plotlyOutput(shiny::NS(id, "plot"), width = "20rem"),
             align = "center"
           )
       ),
@@ -25,7 +25,7 @@ net_promoter_score_UI <- function(id) {
           hr(),
           h3("Breakdown", class = "text-center"),
           div(
-            plotly::plotlyOutput(shiny::NS(id, "vertical_plot"), width = "400px"),
+            plotly::plotlyOutput(shiny::NS(id, "vertical_plot"), width = "20rem"),
             align = "center"
           ))
     )
