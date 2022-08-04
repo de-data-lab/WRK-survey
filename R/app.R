@@ -36,8 +36,9 @@ run_app <- function(...){
     # Body of the page
     shiny::withTags(
       # Render Card
-      div(class = "d-flex flex-column flex-lg-row container",
+      div(class = "d-flex flex-column flex-lg-row container justify-content-center",
           div(class = "container card border-light bg-info m-2",
+              style = "max-width: 50rem",
               div(class = "card-body",
                   net_promoter_score_UI("nps")
               )
