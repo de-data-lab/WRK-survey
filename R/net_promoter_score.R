@@ -100,7 +100,9 @@ net_promoter_score_server <- function(id, data) {
                                   x = 0.10,
                                   y = 0.95,
                                   showarrow = FALSE,
-                                  font = list(size = 15))
+                                  font = list(size = 15)) %>%
+          # Disable drag
+          plotly::layout(dragmode = FALSE)
       }
     )
 
@@ -183,9 +185,11 @@ net_promoter_score_server <- function(id, data) {
         plotly::layout(legend = list(itemclick = FALSE, itemdoubleclick = FALSE)) %>%
         # Disable zoom
         plotly::layout(xaxis = list(fixedrange = TRUE),
-                       yaxis = list(fixedrange = TRUE))
-
-
+                       yaxis = list(fixedrange = TRUE)) %>%
+        # Reduce margin
+        plotly::layout(margin = list(l = 5, r = 5)) %>%
+        # Disable drag
+        plotly::layout(dragmode = FALSE)
 
     })
 
