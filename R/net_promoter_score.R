@@ -115,8 +115,6 @@ net_promoter_score_server <- function(id, data) {
         dplyr::mutate(prop = n / sum(n))
 
 
-      dplyr::glimpse(vertical_bar_summary)
-
       # Prepare the annotations
       vertical_bar_summary <- vertical_bar_summary %>%
         # Set abbreviation for annotation
