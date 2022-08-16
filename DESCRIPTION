@@ -17,4 +17,5 @@ Imports:
     plotly,
     qualtRics,
     shiny,
+    shinycssloaders,
     utils
