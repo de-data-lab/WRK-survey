@@ -17,7 +17,8 @@ net_promoter_score_UI <- function(id) {
               style = "max-width: 30rem",
               "How likely are you to recommend this community to someone else as a good place to live?"),
           div(
-            plotly::plotlyOutput(shiny::NS(id, "plot"), width = "20rem"),
+            plotly::plotlyOutput(shiny::NS(id, "plot"), width = "20rem") %>%
+              shinycssloaders::withSpinner(color = "#00A454"),
             align = "center"
           )
       ),
@@ -25,7 +26,8 @@ net_promoter_score_UI <- function(id) {
           hr(),
           h3("Breakdown", class = "text-center"),
           div(
-            plotly::plotlyOutput(shiny::NS(id, "vertical_plot"), width = "20rem"),
+            plotly::plotlyOutput(shiny::NS(id, "vertical_plot"), width = "20rem") %>%
+              shinycssloaders::withSpinner(color = "#00A454"),
             align = "center"
           ))
     )
@@ -112,8 +114,6 @@ net_promoter_score_server <- function(id, data) {
         dplyr::count(recommend) %>%
         dplyr::mutate(prop = n / sum(n))
 
-
-      dplyr::glimpse(vertical_bar_summary)
 
       # Prepare the annotations
       vertical_bar_summary <- vertical_bar_summary %>%
